@@ -1,0 +1,538 @@
+<template class="task-template">
+  <section id="config-section" class="section js-section u-category-config">
+    <div class="main-panel1">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <span id="config-titre" class="navbar-brand">CONFIGURACION - GESTIÓN DE STOCK DE FARMACIA</span>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end">
+              <div class="navbar-form">
+                <div class="input-group no-border">
+                  <input type="text" value="" class="form-control" placeholder="Buscar">
+                  <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                      <i class="fa fa-search fa-lg"></i>
+                    <div class="ripple-container"></div>
+                  </button>
+                </div>
+              </div>
+              <i class="fa fa-power-off text-danger fa-spin fa-3x fa-fw point" aria-hidden="true"></i> <span class="sr-only">Refrescar</span>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="content_guy">
+          <div class="container-fluid">
+            <div class="ro">
+              <div class="card card-nav-tabs">
+                <div class="card-header card-header-primary">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs nav-config nav-config-15" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active nav-link-med" href="#medicaments" data-toggle="tab">
+                            Medicamentos
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link nav-link-forme" href="#formes" data-toggle="tab">
+                            Formas
+                          </a>
+                        </li>
+                        <li class="nav-item ">
+                          <a class="nav-link nav-link-cat" href="#categories" data-toggle="tab">
+                            Categorias
+                          </a>
+                        </li>
+                        <li class="nav-item ">
+                          <a class="nav-link nav-link-frnssr" href="#frnssr" data-toggle="tab">
+                            
+                          </a>
+                        </li>
+                        <li class="nav-item ">
+                          <a class="nav-link nav-link-service" href="#service" data-toggle="tab">
+                            servicio
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> 
+                </div>
+                <div class="card-body ">
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active table-responsives1" id="medicaments">
+                      <table class="table table-hover tab_left tab_med table-striped" id="tab_med" style="width:100%">
+                        <thead class="text-primary">
+                          <tr>
+                            <th class="1">Numero</th>
+                            <th class="2">Designacion</th>
+                            <th class="3">Cancelar</th>
+                            <th class="4">Categoria</th>
+                            <th>ID</th>
+                            <th>ID_F</th>
+                            <th>ID_Cat</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="tab-pane" id="formes">
+                      <table class="table table-hover tab_forme tab_left table-striped" style="width:100%" id="tab_forme">
+                        <thead class="text-primary">
+                          <tr>
+                            <th class="1"></th>
+                            <th class="2"></th>
+                            <th>ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="tab-pane" id="categories">
+                      <table class="table table-hover tab_left dataTable tab_cat table-striped" id="tab_cat" style="width:100%">
+                        <thead class="text-primary">
+                          <th class="1"></th>
+                          <th class="2"></th>
+                          <th>ID</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="tab-pane" id="frnssr">
+                      <table class="table table-hover tab_left dataTable tab_frnssr table-striped" id="tab_frnssr" style="width:100%">
+                        <thead class="text-primary">
+                          <th class="1"></th>
+                          <th class="2"></th>
+                          <th class="3"></th>
+                          <th class="4"></th>
+                          <th>ID</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="tab-pane" id="service">
+                      <table class="table table-hover tab_left dataTable tab_service table-striped" id="tab_service" style="width:100%">
+                        <thead class="text-primary">
+                          <th class="1"></th>
+                          <th class="2"></th>
+                          <th>ID</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+        <footer class="footer">
+            
+          </footer>
+      </div>
+
+      <script>
+
+        require("./renderer-scripts/config.js");
+      
+      </script>
+  </section>
+  <!-- Modal add medicaments -->
+  <div class="modal fade" id="AddMedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title med-modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="design_med" class="bmd-label-floating design_med">Del medicamento</label>
+                  <input type="text" class="form-control" id="design_med">
+                  <input type="hidden" class="form-control" id="_id_design_med">
+                </div>
+              </div>
+            </div>
+            
+            <select title="Choisissez une forme" id="design_med_forme" data-live-search="true"
+             multiple data-max-options="1" data-style="btn btn-link" data-width="auto">
+             
+            </select>
+            <select class="selectpicker" title="Choisissez une catégorie" id="design_med_cat" data-live-search="true"
+            multiple data-max-options="1" data-style="btn btn-link" data-width="auto">
+            
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button id="save_med" class="btn btn-primary">
+              <i class=""></i>
+              <span>Registrarse</span>
+            </button>
+            <button id="update_med" class="btn btn-rose">
+                <i class=""></i>
+                <span></span>
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerca</button>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal add Formes -->
+    <div class="modal fade" id="AddFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title forme-modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="design_forme" class="design_forme bmd-label-floating">Forma del medicamento</label>
+              <input type="text" class="form-control" id="design_forme">
+              <input type="hidden" class="form-control" id="_id_design_forme">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="save_forme" class="btn btn-primary">
+                <i class=""></i>
+                <span></span>
+            </button>
+            <button id="update_forme" class="btn btn-rose">
+                <i class=""></i>
+                <span></span>
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal add Catégorie -->
+    <div class="modal fade" id="AddCatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title cat-modal-title"></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="design_cat" class="design_cat bmd-label-floating">Categoria del medicament</label>
+                <input type="text" class="form-control" id="design_cat">
+                <input type="hidden" class="form-control" id="_id_design_cat">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="save_cat" class="btn btn-primary">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button id="update_cat" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal delete Forme -->
+      <div class="modal fade" id="SuppFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-danger">Eliminar una forma</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <h3 class="text-center"><span>¿Estás seguro de que quieres eliminar la forma?: </span>
+                <b class="text-danger" id="del_design_forme"></b>?</h3>
+                <input type="hidden" class="form-control" id="_id_del_design_forme">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="supp_forme" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal delete Categorie -->
+      <div class="modal fade" id="SuppCatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-danger">Eliminar una categoría</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <h3 class="text-center"><span>¿Está seguro de que desea eliminar la categoría? : </span>
+                <b class="text-danger" id="del_design_cat"></b>?</h3>
+                <input type="hidden" class="form-control" id="_id_del_design_cat">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="supp_cat" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal delete medicament -->
+      <div class="modal fade" id="SuppMedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-danger"></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <h3 class="text-center"> <span></span>
+                <b class="text-danger" id="del_design_med"></b>?</h3>
+                <input type="hidden" class="form-control" id="_id_del_design_med">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="supp_med" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal upload medicament -->
+      <div class="modal fade" id="UploadMedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="fa fa-close"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-xs-12 m-left-15">
+                    <input type="file" id="file" />
+                    <label for="file" class="btn-2" ><span></span></label> 
+                    <label><span class="uploaded_file_name"> </span></label> 
+                  </div>
+                  
+                  <div id="preview_csv" class="row">
+                    <table class="table table-hover tab_med tab_left table-striped" id="tab_uploaded_med" style="width:100%">
+                      <thead class="text-warning">
+                        <tr>
+                          <th class="1"></th>
+                          <th class="2"></th>
+                          <th class="3"></th>
+                          <th class="4"></th>
+                          <th class="5"></th>
+                       
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="progresses">
+                    <div class="progress progress-line-primary">
+                      <div class="progress-bar progress-bar-success progress-bar-forme" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="progress progress-line-primary">
+                      <div class="progress-bar progress-bar-info progress-bar-cat" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="progress progress-line-primary">
+                      <div class="progress-bar progress-bar-primary progress-bar-med" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" id="submit_med">
+                  <i class=""></i>
+                  <span></span>
+                </button>
+                <button id="fermerUploadModal" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal add frnssr -->
+        <div class="modal fade" id="AddFrnssrModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title frnssr-modal-title"></h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="nom_fnssr" class="nom_fnssr bmd-label-floating">Proveedor</label>
+                    <input type="text" class="form-control" id="nom_fnssr">
+                    <input type="hidden" class="form-control" id="_id_fnssr">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone_fnssr" class="phone_fnssr bmd-label-floating">Telefono</label>
+                    <input type="phone" class="form-control" id="phone_fnssr">
+                  </div>
+                  <div class="form-group">
+                    <label for="adress_fnssr" class="adress_fnssr bmd-label-floating">Dirección</label>
+                    <input type="text" class="form-control" id="adress_fnssr">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button id="save_frnssr" class="btn btn-primary">
+                      <i class=""></i>
+                      <span></span>
+                  </button>
+                  <button id="update_frnssr" class="btn btn-rose">
+                      <i class=""></i>
+                      <span></span>
+                  </button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Modal delete medicament -->
+      <div class="modal fade" id="SuppFrnssrModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-danger"></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <h3 class="text-center"> <span></span>
+                <b class="text-danger" id="del_nom_frnssr"></b>?</h3>
+                <input type="hidden" class="form-control" id="_id_del_frnssr">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="supp_frnssr" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal add service -->
+      <div class="modal fade" id="AddServiceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title service-modal-title"></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="nom_service" class="nom_service bmd-label-floating">Servicio</label>
+                <input type="text" class="form-control" id="nom_service">
+                <input type="hidden" class="form-control" id="_id_service">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="save_service" class="btn btn-primary">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button id="update_service" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal delete service -->
+      <div class="modal fade" id="SuppServiceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-danger"></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <h3 class="text-center"> <span></span>
+                <b class="text-danger" id="del_nom_service"></b>?</h3>
+                <input type="hidden" class="form-control" id="_id_del_service">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="supp_service" class="btn btn-rose">
+                  <i class=""></i>
+                  <span></span>
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+</template>

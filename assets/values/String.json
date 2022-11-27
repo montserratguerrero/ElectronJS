@@ -1,0 +1,160 @@
+{
+    "name":"Farmacia",
+    "nbr":"Número",
+    "designation":"Designación",
+    "error":"Error",
+    "error_del_db":"No se puede eliminar de la base de datos",
+    "success_del_db":"ha sido eliminado de la base de datos",
+    "section_dashboard": {
+        "name": "Gestion",
+        "icon": "fa fa-th-large fa-lg"
+    },
+    "section_config": {
+        "name": "Configuraciones",
+        "icon": "fa fa-cog fa-lg"
+    },
+    "section_stock": {
+        "name": "Stock de Medicamentos",
+        "icon": "fa fa-medkit fa-lg",
+        "sous_titre":"La lista de medicamentos en stock"
+    },
+    "section_entrée": {
+        "name": "Ingreso",
+        "icon": "fa fa-plus-circle fa-lg",
+        "sous_titre":"Movimientos de medicamentos ingresados"
+    },
+    "section_sortie": {
+        "name": "Salida",
+        "icon": "fa fa-minus-circle fa-lg",
+        "sous_titre":"Movimientos de medicamentos salientes",
+        "date" : "Fecha de lanzamiento",
+        "quantité" : "Cantidad de salida"
+    },
+    "section_rapport": {
+        "name": "Relación",
+        "icon": "fa fa-line-chart fa-lg"
+    },
+    "section_aide": {
+        "name": "Necesitas ayuda?",
+        "icon": "fa fa-info fa-lg"
+    },
+    "section_apropos": {
+        "name": "Acerca de",
+        "icon": "fa fa-hashtag fa-lg"
+    },
+    "buttons": {
+        "add": {
+            "name": "Guardar",
+            "icon": "fa fa-save"
+        },
+        "new": {
+            "name": "Nuevo",
+            "icon": "fa fa-plus"
+        },
+        "edit": {
+            "name": "Modificar",
+            "icon": "fa fa-edit"
+        },
+        "del": {
+            "name": "Eliminar",
+            "icon": "fa fa-trash"
+        },
+        "export": {
+            "name": "Exportar CSV",
+            "icon": "fa fa-file-excel-o"
+        },
+        "valid": {
+            "name": "Validar",
+            "icon": "fa fa-check-square"
+        },
+        "upload": {
+            "name": "Importar un CSV",
+            "icon": "fa fa-download"
+        }
+    },
+    "forme": {
+        "name": "Formulario",
+        "plurial": "Formularios",
+        "add": "Añadir una forma",
+        "del": "Eliminar una forma",
+        "edit": "Editar una forma",
+        "file_name":"Lista de formas",
+        "del_confirm_msg":"¿Estás seguro de que quieres eliminar la forma? : ",
+        "designation":"Forma del medicamento"
+    },
+    "cat": {
+        "name": "Categoria",
+        "plurial": "Categorias",
+        "add": "Añadir una categoría",
+        "del": "Eliminar una categoría",
+        "edit": "Editar una categoría",
+        "file_name":"Lista de categoría",
+        "del_confirm_msg":"¿Está seguro de que desea eliminar la categoría? : ",
+        "designation":"Categoría de medicamento"
+    },
+    "med": {
+        "name": "Medicamento",
+        "plurial": "Medicamentos",
+        "add": "Agregar medicamento",
+        "del": "Eliminar un medicamento",
+        "edit": "Modificar un medicamento",
+        "file_name":"lista de medicamentos",
+        "del_confirm_msg":"¿Está seguro de que desea eliminar el medicamento?: ",
+        "designation":"Designación de medicamentos",
+        "upload":"Importer un fichero CSV",
+        "stock_init":"Stock inicial"
+    },
+    "fournisseur": {
+        "name": "Proveedor",
+        "plurial": "Provedores",
+        "add": "Añadir un proveedor",
+        "del": "Eliminar un proveedor",
+        "edit": "Modificar un proveedor",
+        "file_name":"Lista de proveedores",
+        "del_confirm_msg":"¿Está seguro de que desea eliminar el proveedor?: ",
+        "designation":"Nombre del proveedor",
+        "adress":"Dirección",
+        "phone":"Contacto"
+    },
+    "service": {
+        "name": "Servicio",
+        "plurial": "Servicios",
+        "add": "Agregar un servicio",
+        "del": "Eliminar un servicio",
+        "edit": "Modificar un servicio",
+        "file_name":"Lista de servicios",
+        "del_confirm_msg":"¿Está seguro de que desea eliminar el servicio? : ",
+        "designation":"Nombre del Servicio"
+    },
+    "entree": {
+        "name": "Ingreso",
+        "plurial": "Ingresos",
+        "add": "Ingresar medicamento",
+        "del": "Eliminar la entrada",
+        "edit": "Editar una entrada",
+        "del_confirm_msg":"¿Confirmas esta eliminación?",
+        "designation":"Entrada de medicamentos",
+        "date" : "Fecha de entrada",
+        "quantité" : "Cantidad",
+        "file_name": "Movimientos de medicamentos ingresados"
+    },
+    "sortie": {
+        "name": "Salida",
+        "plurial": "Salidas",
+        "add": "Sacar un medicamento",
+        "del": "Eliminar una salida",
+        "edit": "Modificar una salida",
+        "del_confirm_msg":"¿Confirmas esta eliminación??",
+        "designation":"liberación de medicamentos",
+        "date" : "Fecha de salida",
+        "quantité" : "Cantidad",
+        "file_name": "Movimientos de medicamentos que salieron"
+    },
+    "stock": {
+        "name": "Stock",
+        "plurial": "Stocks",
+        "date" : "Fecha",
+        "file_name": "Stock de medicamentos"
+    }
+
+}

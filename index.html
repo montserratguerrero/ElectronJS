@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" class="nav-open">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="node_modules/material-dashboard/assets/css/material-dashboard.css">
+ 
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/nativize.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/section.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="assets/css/datatables/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="assets/css/app_2.min.css">
+  
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+  <link rel="import" href="sections/about.html">
+  <link rel="import" href="sections/dashboard/dashboard.html">
+  <link rel="import" href="sections/entree/entree.html">
+  <link rel="import" href="sections/stock/stock.html">
+  <link rel="import" href="sections/sortie/sortie.html">
+  <link rel="import" href="sections/rapport/rapport.html">
+  <link rel="import" href="sections/config/config.html">
+  <link rel="import" href="sections/aide/aide.html">
+  <link rel="import" href="sections/apropos/apropos.html">
+
+</head>
+<body style="height: 100% !important;">
+
+  <nav class="nav js-nav sidebar">
+      <header class="nav-header">
+       </header>
+    
+      <div class="nav-item u-category-dashboard">
+        <h5 class="nav-category">
+            <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
+            Menus
+          </h5>
+
+      <span class="nav-link" >
+        <button type="button" id="button-dashboard" data-section="dashboard" class="nav-button point is-selected">
+          <i ></i> <em>Tableau de bord</em>
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-stock" data-section="stock" class="nav-button point">
+            <i ></i><em></em>
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-entree" data-section="entree" class="nav-button point">
+            <i ></i><em>Entrar</em>
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-sortie" data-section="sortie" class="nav-button point">
+            <i ></i>
+            <em>Salir</em>
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-rapport" data-section="rapport" class="nav-button point">
+          <i ></i> <em>Relacion</em>
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-config" data-section="config" class="nav-button point">
+          <i ></i> <em>Configuración</em>
+        </button>
+      </span>
+    </div>
+
+    <div class="nav-item u-category-system">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
+        Configuraciones
+      </h5>
+      <span class="nav-link" >
+        <button type="button" id="button-aide" data-section="aide" class="nav-button point">
+          <i ></i> Necesitas ayuda?
+        </button>
+      </span>
+      <span class="nav-link" >
+        <button type="button" id="button-apropos" data-section="apropos" class="nav-button point">
+          <i ></i> Acerca de
+        </button>
+      </span>
+    </div>
+    
+  </nav>
+
+  <main class="content js-content"></main>
+  <script>
+    global.jQuery   = require('jquery');
+    global.$        = global.jQuery;
+
+    require('./assets/imports')
+    require('./assets/ex-links')
+    require('./assets/nav')
+    require('./assets/demo-btns')
+    require('./assets/code-blocks')
+    require('./assets/normalize-shortcuts')
+    require('./assets/DisplayFrench')
+
+  </script>
+  <script src="node_modules/material-dashboard/assets/js/core/popper.min.js"></script>
+  <script src="node_modules/material-dashboard/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="assets/js/bootstrap-select.min.js"></script>
+  <script src="assets/js/defaults-fr_FR.js"></script>
+  <script src="assets/js/plugins/sweetalert2.js"></script>
+
+  <script src="node_modules/material-dashboard/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="node_modules/material-dashboard/assets/js/plugins/chartist.min.js"></script>
+  <script src="node_modules/material-dashboard/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="node_modules/material-dashboard/assets/js/material-dashboard.js"></script>
+
+
+</body>
+</html>

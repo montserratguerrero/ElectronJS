@@ -1,0 +1,203 @@
+/* Section ------------------ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--color-accent);
+
+  /* Hide */
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: visibility 0s .12s linear , opacity .12s ease-in, transform .12s ease-in;
+}
+.section.is-shown {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: visibility 0s 0s linear , opacity .36s ease-out, transform .36s ease-out;
+}
+
+.section h3,
+.section p {
+  color: var(--color);
+}
+
+.section-wrapper {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+@media (min-width: 940px) {
+  .section-wrapper {
+    padding-top: 4rem;
+  }
+}
+
+.section-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: .5em;
+}
+.tab_left {
+  text-align-last: left;
+}
+.nav-config-15 {
+  margin: -15px;
+}
+.select-info, .select-item{
+  margin-left: 14px;
+  color: #a11;
+}
+.f-left{
+  float: left;
+}
+.m-left-15 {
+  margin-left: 15px
+}
+.dt-buttons {
+  width: 100%;
+  text-align: left;
+}
+.dt-button.disabled, .dt-button:disabled {
+  opacity: 0.65;
+  box-shadow: none;
+}
+.dt-button {
+  color: #fff;
+  background-color: #999999;
+  border-color: #999999;
+  position: relative;
+  padding: 12px 30px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform;  
+  box-shadow:0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+#update_forme {
+  display: none;
+}
+#AddFormModalBody .swal2-container {
+  /*position:inherit;*/
+}
+#AddFormModalBody .swal2-container.swal2-shown {
+  /*background-color: transparent;*/
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+[type="file"] + label:hover {
+  background-color: #d3460d;
+}
+
+[type="file"] + label.btn-2 {
+  background-color: #99c793;
+  overflow: hidden;
+}
+[type="file"] + label.btn-2::before {
+  color: #fff;
+  font-family: "FontAwesome";
+  content: "\f019";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+}
+[type="file"] + label.btn-2:hover {
+  background-color: #497f42;
+}
+[type="file"] + label.btn-2:hover::before {
+  right: 85%;
+}
+#preview_csv {
+  margin: auto;
+  width: 100%;
+}
+#UploadMedModal .modal-lg{
+  min-width: 85%;
+}
+#EntreeSortieStockModal .modal-lg{
+  min-width: 85%;
+}
+#tab_uploaded_med_wrapper {
+  width: 100%;
+  padding: 15px;
+}
+.dropdown-menu.show {
+  min-width: -webkit-fill-available !important;
+}
+.filter-option {
+  margin-left: -28px;
+}
+.progress {
+  height: auto;
+  border-radius: 5px;
+  background: #ddd;
+  margin: 15px;
+}
+.progress .progress-bar.progress-bar-primary {
+  background: #9c27b0!important;
+}
+.progress .progress-bar.progress-bar-info {
+  background: #00bcd4!important;
+}
+.progress .progress-bar.progress-bar-success {
+  background: #4caf50;
+}
+.progresses {
+  display: none;
+  width: 100%;
+}
+.table-responsives{
+  display:block;
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  -ms-overflow-style:-ms-autohiding-scrollbar
+}
