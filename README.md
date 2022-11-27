@@ -7,5 +7,6 @@ Arranque
 Necesitará Node.js instalado en su computadora para poder crear esta aplicación.
 
 $ npm install
+
 $ npm start
 
